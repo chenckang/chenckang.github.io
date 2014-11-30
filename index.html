@@ -1,15 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Document</title>
-    <style>
-        div {
-            color: #fff;
-        }
-    </style>
-</head>
-<body>
-    <div>xxx</div>
-</body>
-</html>
+---
+layout:default
+title:index
+---
+<p>wenzhang</p>
+<ul>
+	{% for post in site.posts %}
+		<li>{{post.data|date_to_string}} <a href="{{site.baseurl}}{{post.url}}">{{post.title}}</a></li>
+{%endfor%}
+</ul>
