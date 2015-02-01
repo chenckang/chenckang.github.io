@@ -28,6 +28,17 @@ html, body {
     margin: 5px 0 20px 0;
 }
 
-.main-article p, .main-article blockquote {
+.main-article .first-paragraph:first-letter {
+    font-size: 6em;
+    float: left;
+    margin-right: 0.02em;
+    line-height: 0.75;
+}
+
+.main-article p {
+    margin: 30px 0;
+}
+
+.main-article blockquote {
     text-indent: 2em;
 }
