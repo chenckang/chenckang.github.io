@@ -1,10 +1,23 @@
+{% include JB/setup %}
+
 <!doctype html>
 <html>
     <head>
     	<meta charset="utf-8">
     	<title>{{page.title}}</title>
+        {%if page.description%}<meta name="description" content="{{page.description}}">{%endif%}
+        <meta name="author" content="{{site.author.name}}">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="{{ASSET_PATH}}themes/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="{{ASSET_PATH}}themes/bootstrap/css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="{{ASSET_PATH}}themes/bootstrap/css/bs-sticky-footer.css">
+        <link rel="stylesheet" href="{{ASSET_PATH}}static/css/article.css">
     </head>
     <body>
+        {% include divs/header/header.html %}
     	{{content}}
+        {% include divs/footer/footer.html %}
+        <script src="{{ASSET_PATH}}static/lib/jquery.min.js"></script>
+        <script src="{{ASSET_PATH}}themes/bootstrap/js/bootstrap.min.js"></script>
     </body>
 </html>

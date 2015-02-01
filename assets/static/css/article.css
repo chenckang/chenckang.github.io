@@ -1,0 +1,33 @@
+html, body {
+    width: 100%;
+    height: 100%;
+    font-size: 16px;
+}
+
+.main-article {
+    width: 980px;
+    margin: auto;
+}
+
+.main-article .title {
+    margin: 100px 0 30px 0;
+    font-size: 1.8em;
+    text-align: center;
+}
+
+.main-article .signature {
+    text-align: center;
+    margin: 10px 0;
+}
+
+.main-article .signature date {
+    font-size: .8em;
+}
+
+.main-article hr {
+    margin: 5px 0 20px 0;
+}
+
+.main-article p, .main-article blockquote {
+    text-indent: 2em;
+}
