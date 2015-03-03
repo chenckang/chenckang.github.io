@@ -1,7 +1,7 @@
 {% include JB/setup %}
 
 <!doctype html>
-<html>
+<html xmlns:wb="http://open.weibo.com/wb">
     <head>
     	<meta charset="utf-8">
     	<title>{{page.title}}</title>
@@ -14,10 +14,15 @@
         <link rel="stylesheet" href="{{ASSET_PATH}}static/css/common.css">
         <link rel="stylesheet" href="{{ASSET_PATH}}static/css/article.css">
         <link rel="stylesheet" href="{{ASSET_PATH}}static/css/comments.css">
+        <link rel="stylesheet" href="{{ASSET_PATH}}static/css/profile.css">
+        <script src="http://tjs.sjs.sinajs.cn/open/api/js/wb.js" type="text/javascript" charset="utf-8"></script>
     </head>
     <body>
         {% include divs/header/header.html %}
-    	{{content}}
+        <div class="main">
+            {% include divs/profile/profile.html %}
+            {{content}}<
+        </div>
         {% include divs/footer/footer.html %}
         <script src="{{ASSET_PATH}}static/lib/jquery.min.js"></script>
         <script src="{{ASSET_PATH}}themes/bootstrap/js/bootstrap.min.js"></script>

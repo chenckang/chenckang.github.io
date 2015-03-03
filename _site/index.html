@@ -1,7 +1,7 @@
 
 
 <!doctype html>
-<html>
+<html xmlns:wb="http://open.weibo.com/wb">
     <head>
     	<meta charset="utf-8">
     	<title>index</title>
@@ -14,11 +14,32 @@
         <link rel="stylesheet" href="/assets/static/css/common.css">
         <link rel="stylesheet" href="/assets/static/css/article.css">
         <link rel="stylesheet" href="/assets/static/css/comments.css">
+        <link rel="stylesheet" href="/assets/static/css/profile.css">
+        <script src="http://tjs.sjs.sinajs.cn/open/api/js/wb.js" type="text/javascript" charset="utf-8"></script>
     </head>
     <body>
         <header>
 </header>
-    	
+        <div class="main">
+            <section class="profile">
+    <div class="personal">
+        <h1></h1>
+        <div><img src="/assets/static/imgs/profile.jpg" alt="头像"></div>
+    </div>
+    <div class="links">
+        <ul>
+            <li><wb:follow-button uid="2991975565" type="gray_1" width="67" height="24" ></wb:follow-button></li>
+        </ul>
+    </div>
+    <footer>
+        @
+        <script>
+            document.write(new Date().getFullYear());
+        </script>
+        Colin
+    </footer>
+</section>
+            
     
 
     
@@ -63,7 +84,8 @@
 
     <a href="/ecma3/categories">/ecma3/categories</a><br>
 
-
+<
+        </div>
         <footer>
 </footer>
         <script src="/assets/static/lib/jquery.min.js"></script>
