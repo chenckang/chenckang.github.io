@@ -3,12 +3,14 @@ html, body {
 }
 
 .main-article {
-    width: 72%;
-    margin-left: 23%;
+    width: 100%;
+    margin: auto;
+    padding: 100px 40px 30px 40px;
+    background: #fff;
+    border-bottom: 1px solid #eee;
 }
 
 .main-article .title {
-    margin: 100px 0 30px 0;
     font-size: 1.8em;
     text-align: center;
 }

@@ -2,12 +2,3 @@
 layout: default
 title: index
 ---
-{%for i in site.posts%}
-    {%if i.category == 'ecma3'%}
-        {{ i.category }}<br>
-    {%endif%}
-{%endfor%}
-
-{%for i in site.posts%}
-    <a href="{{i.url}}">{{i.url}}</a><br>
-{%endfor%}

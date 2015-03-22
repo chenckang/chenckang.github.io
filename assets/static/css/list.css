@@ -1,0 +1,36 @@
+.list {
+    background: #f2f2f2;
+    height: 100%;
+}
+
+.list .list-card {
+    background: #fff;
+    border: 1px solid #eee;
+    padding: 20px 40px;
+    min-height: 200px;
+    margin: 10px;
+}
+
+.list .signature {
+    text-align: right;
+}
+
+.list .signature author {
+    color: #41b7d8;
+}
+
+.list .marker{
+    margin: 0 .2em 0 .5em;
+}
+
+.list .mark-paragraph:first-letter {
+    font-size: 3em;
+    float: left;
+    margin-right: 0.02em;
+    line-height: 0.75;
+}
+
+.list img {
+    margin: 2em auto;
+    display: block;
+}

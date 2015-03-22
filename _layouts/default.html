@@ -15,13 +15,18 @@
         <link rel="stylesheet" href="{{ASSET_PATH}}static/css/article.css">
         <link rel="stylesheet" href="{{ASSET_PATH}}static/css/comments.css">
         <link rel="stylesheet" href="{{ASSET_PATH}}static/css/profile.css">
+        <link rel="stylesheet" href="{{ASSET_PATH}}static/css/list.css">
         <script src="http://tjs.sjs.sinajs.cn/open/api/js/wb.js" type="text/javascript" charset="utf-8"></script>
     </head>
     <body>
         {% include divs/header/header.html %}
         <div class="main">
-            {% include divs/profile/profile.html %}
-            {{content}}<
+            <div class="left">
+                {% include divs/profile/profile.html %}
+            </div>
+            <div class="right">
+                {{content}}
+            </div>
         </div>
         {% include divs/footer/footer.html %}
         <script src="{{ASSET_PATH}}static/lib/jquery.min.js"></script>
