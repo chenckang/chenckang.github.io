@@ -1,35 +1,46 @@
-{% include JB/setup %}
+---
+layout: compress
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
 
-<!doctype html>
-<html xmlns:wb="http://open.weibo.com/wb">
-    <head>
-    	<meta charset="utf-8">
-    	<title>{{page.title}}</title>
-        {%if page.description%}<meta name="description" content="{{page.description}}">{%endif%}
-        <meta name="author" content="{{site.author.name}}">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="{{ASSET_PATH}}themes/bootstrap/css/bootstrap.min.css">
-        <link rel="stylesheet" href="{{ASSET_PATH}}themes/bootstrap/css/bootstrap-theme.min.css">
-        <link rel="stylesheet" href="{{ASSET_PATH}}themes/bootstrap/css/bs-sticky-footer.css">
-        <link rel="stylesheet" href="{{ASSET_PATH}}static/css/common.css">
-        <link rel="stylesheet" href="{{ASSET_PATH}}static/css/article.css">
-        <link rel="stylesheet" href="{{ASSET_PATH}}static/css/comments.css">
-        <link rel="stylesheet" href="{{ASSET_PATH}}static/css/profile.css">
-        <link rel="stylesheet" href="{{ASSET_PATH}}static/css/list.css">
-        <script src="http://tjs.sjs.sinajs.cn/open/api/js/wb.js" type="text/javascript" charset="utf-8"></script>
-    </head>
-    <body>
-        {% include divs/header/header.html %}
-        <div class="main">
-            <div class="left">
-                {% include divs/profile/profile.html %}
-            </div>
-            <div class="right">
-                {{content}}
-            </div>
+    <meta charset="utf-8">
+    <meta http-equiv=X-UA-Compatible content="IE=edge,chrome=1">
+    <meta name=viewport content="width=device-width, initial-scale=1">
+
+    <meta name=description content="{{ site.bio }}">
+    <meta name=author content="{{ site.name }}">
+
+    {% seo %}
+
+    {% include favicon.html %}
+
+    <link rel="canonical" href="{{ site.url }}{{ page.url | replace:'index.html','' }}">
+    <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ site.url }}{{ "/feed.xml" }}" />
+
+    <style>{% include main.css %}</style>
+</head>
+<body>
+
+    <div class="wrapper-{% if site.width == "normal" %}normal{% elsif site.width == "large" %}large{% endif %}">
+        {% if page.tag %}
+            <div class="post">
+        {% else %}
+            {% if page.title == "About" or page.title == "404" %}
+                <div class="page {{ page.title | downcase }}">
+            {% else %}
+                <div class="{{ page.title | downcase }}">
+            {% endif %}
+        {% endif %}
+
+            {{ content }}
         </div>
-        {% include divs/footer/footer.html %}
-        <script src="{{ASSET_PATH}}static/lib/jquery.min.js"></script>
-        <script src="{{ASSET_PATH}}themes/bootstrap/js/bootstrap.min.js"></script>
-    </body>
+    </div>
+
+    {% include icons.html %}
+
+    {% include analytics-google.html %}
+
+</body>
 </html>
