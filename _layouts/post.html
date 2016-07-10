@@ -1,33 +1,19 @@
----
-layout: default
----
-{% include header.html %}
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/BlogPosting" {% if page.main-class %}class="post-{{ page.main-class }}"{% endif %}>
+    {% include head.html %}
+    <body>
+        {% include svg-icons.html %}
+        {% include header-post.html %}
+        <section class="post">
 
-<h1 class="title">{{ page.title }}</h1>
+            <article role="article" id="post" class="post-content" itemprop="articleBody">
+                {{ content }}
+            </article>
 
-<span class="date">
-    <time datetime="{{ page.date | date:"%d-%m-%Y" }}">{{ page.date | date: "%A. %B %d, %Y" }}</time>
-    {% if site.read-time %} - {% include read-time.html %}{% endif %}
-</span>
-
-{% if site.show-tags %}
-    <div class="post-tags">
-        {% for tag in page.tags %}
-            <a class="item" href="{{ site.url }}/tags/#{{ tag | slugify }}">{{ tag }}</a>
-        {% endfor %}
-    </div>
-{% endif %}
-
-{{content}}
-
-{% if site.related %}
-    {% include related.html %}
-{% endif %}
-
-{% include author.html %}
-
-{% if site.disqus %}
-    {% include disqus.html %}
-{% endif %}
-
-{% include footer.html %}
+            {% include share.html %}
+            {% include author.html %}
+            {% include comments.html %}
+            {% include footer.html %}
+        </section>
+    </body>
+</html>

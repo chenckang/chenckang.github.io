@@ -1,31 +1,36 @@
 {
-  "name": "indigo",
-  "version": "0.1.0",
+  "name": "cardsjekyll",
+  "version": "1.0.0",
+  "description": "A simple template for Jekyll Blogs.",
   "main": "gulpfile.js",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/sergiokopplin/indigo.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/sergiokopplin/indigo/issues"
-  },
-  "homepage": "https://github.com/sergiokopplin/indigo#readme",
-  "devDependencies": {
-    "autoprefixer-stylus": "^0.8.1",
-    "browser-sync": "^2.10.1",
-    "gulp": "^3.9.0",
-    "gulp-changed": "^1.3.0",
-    "gulp-imagemin": "^2.4.0",
-    "gulp-plumber": "^1.0.1",
-    "gulp-stylus": "^2.2.0",
-    "nib": "^1.1.0",
-    "require-dir": "^0.3.0",
-    "rupture": "^0.6.1"
-  },
   "scripts": {
-    "build": "bundle exec jekyll build",
-    "test": "bundle exec htmlproof ./_site"
+    "test": "test"
+  },
+  "keywords": [
+    "frontend",
+    "blog",
+    "css",
+    "stylus",
+    "gulp",
+    "jekyll",
+    "js"
+  ],
+  "author": "Willian Justen de Vasconcellos",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer-stylus": "^0.4.0",
+    "browser-sync": "^1.9.0",
+    "grunt": "^0.4.5",
+    "gulp": "^3.8.10",
+    "gulp-cache": "^0.3.0",
+    "gulp-concat": "^2.4.3",
+    "gulp-imagemin": "^2.1.0",
+    "gulp-plumber": "^0.6.6",
+    "gulp-stylus": "^1.3.7",
+    "gulp-uglify": "^1.0.2",
+    "jeet": "^6.1.2",
+    "kouto-swiss": "^0.11.6",
+    "minimist": "^1.2.0",
+    "rupture": "^0.6.1"
   }
 }

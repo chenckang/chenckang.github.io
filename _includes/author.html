@@ -1,20 +1,11 @@
-<section class="author{% if site.disqus == false %} no-disqus{% endif %}">
-    <div class="toleft">
-        <img class="selfie" src="{% if site.external-image == true %}{{ site.picture }}{% else %}{{ site.url }}/{{ site.picture }}{% endif %}" alt="{{ site.name }}">
-    </div>
-
-    <div class="toright">
-        <h4 class="name">{{ site.name }}</h4>
-        <p class="bio">{{ site.bio }}</p>
-
-        <div class="share">
-            <a class="twitter" href="https://twitter.com/intent/tweet?text={{ site.url }}{{ page.url }} - {{ page.title }} by @{{ site.github }}">
-                <svg class="icon icon-twitter"><use xlink:href="#icon-twitter"></use></svg><span class="icon-twitter">Tweet</span>
-            </a>
-
-            <a class="facebook" href="javascript:void(0)" onclick="window.open('https://facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href), 'facebook-share-dialog', 'width=626,height=436'); return false;">
-                <svg class="icon icon-facebook"><use xlink:href="#icon-facebook"></use></svg><span class="icon-facebook-rect">Share</span>
-            </a>
-        </div>
+<section class="author" itemprop="author">
+    <div class="details" itemscope itemtype="http://schema.org/Person">
+        <img itemprop="image" class="img-rounded" src="/assets/img/blog-author.jpg" alt="{{site.name}}">
+        <p class="def">Author</p>
+        <h3 class="name">
+            <a itemprop="name" href="https://plus.google.com/+{{site.gplus_username}}/posts">{{site.username}}</a>
+        </h3>
+        <p class="desc">{{site.user_description}}</p>
+        <a itemprop="email" class="email" href="mailto:{{site.email}}">{{site.email}}</a>
     </div>
 </section>

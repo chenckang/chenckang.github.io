@@ -1,84 +1,128 @@
-<p align="center">
-    <h2 align="center">Indigo Minimalist Jekyll Template - <a href="http://sergiokopplin.github.io/indigo/">Demo</a> · <a href="https://travis-ci.org/sergiokopplin/indigo"><img src="https://camo.githubusercontent.com/5393485b732749b3499264168fa8af60166071e8/68747470733a2f2f7472617669732d63692e6f72672f73657267696f6b6f70706c696e2f696e6469676f2e7376673f6272616e63683d67682d7061676573" alt="Build Status" data-canonical-src="https://travis-ci.org/sergiokopplin/indigo.svg?branch=gh-pages" style="max-width:100%;"></a></h2>
-</p>
+## Cards Jekyll Template - [Demo](http://willianjusten.com.br/cards-jekyll-template)
 
-<p align="center">This is a simple and minimalist template for Jekyll for those who likes to eat noodles.</p>
+![Screenshot](screenshot.png)
 
-***
+This is a simple and minimalist template for Jekyll designed for developers that want to write blog posts but don't want to care about frontend stuff.
 
-<p align="center">
-    <b><a href="README.md#what-has-inside">What has inside?</a></b>
-    |
-    <b><a href="README.md#setup">Setup?</a></b>
-    |
-    <b><a href="README.md#settings">Settings</a></b>
-    |
-    <b><a href="README.md#how-to">How to</a></b>
-    |
-    <b><a href="README.md#tests">Tests</a></b>
-    |
-    <b><a href="README.md#problems">Problems</a></b>
-</p>
+The Theme features:
 
-<p align="center">
-    <img src="https://raw.githubusercontent.com/sergiokopplin/indigo/gh-pages/screen-shot.png" />
-</p>
+- Gulp
+- Stylus (Jeet, Rupture, Kouto Swiss)
+- Live Search
+- Offcanvas Menu
+- SVG icons
+- Very very small and fast!
+- Shell Script to create posts
+- Tags page
+- Series page
+- About Me page
+- Feed RSS
+- Sitemap.xml
+- Color Customization
+- Info Customization
 
-## What has inside?
+## Basic Setup
 
-- [Gulp](http://gulpjs.com/), [BrowserSync](https://www.browsersync.io/), [Stylus](http://stylus-lang.com/) ~[RSCSS](http://rscss.io/)~ and [SVG](https://www.w3.org/Graphics/SVG/)
-- Tests with [Travis](https://travis-ci.org/)
-- Google Speed: [98/100](https://developers.google.com/speed/pagespeed/insights/?url=http%3A%2F%2Fsergiokopplin.github.io%2Findigo%2F)
-- No JS. :sunglasses:
+1. [Install Jekyll](http://jekyllrb.com)
+2. Fork the [Cards Jekyll Template](https://github.com/willianjusten/cards-jekyll-template/fork)
+3. Clone the repo you just forked.
+4. Edit `_config.yml` to personalize your site.
+5. Check out the sample posts in `_posts` to see examples for assigning categories and tags, and other YAML data.
+6. Read the documentation below for further customization pointers and documentation.
+7. **Remember to compile your assets files with Gulp.**
 
-## Setup
+## Site and User Settings
 
-0. :star: to the project. :metal:
-1. [Install Jekyll](http://jekyllrb.com), [NodeJS](https://nodejs.org/) and [Bundler](http://bundler.io/).
-2. Fork the project [Indigo](https://github.com/sergiokopplin/indigo/fork)
-3. Edit `_config.yml` with your data.
-4. `bundle install`
-5. `npm install && npm install -g gulp`
-6. `gulp`
-7. open in your browser: `http://localhost:3000`
-
-> [Arti Annaswamy](https://github.com/aannasw) wrote a really nice tutorial of "how to install jekyll". Here's the [part 1](http://artiannaswamy.com/build-a-github-blog-part-1) and [part 2](http://artiannaswamy.com/build-a-github-blog-part-2). :metal:
-
-## Settings
-
-You must fill some informations on `_config.yml` to customize your site.
+You have to fill some informations on `_config.yml` to customize your site.
 
 ```
-name: John Doe
-bio: 'A Man who travels the world eating noodles'
-picture: 'assets/images/profile.jpg'
-...
+# Site settings
+description: A blog about lorem ipsum dolor sit amet
+baseurl: "" # the subpath of your site, e.g. /blog/ or empty.
+url: "http://localhost:3000" # the base hostname & protocol for your site 
 
-and lot of other options, like width, projects, pages, read-time, tags, relateds, animations, etc.
+# User settings
+username: Lorem Ipsum
+user_description: Anon Developer at Lorem Ipsum Dolor
+user_title: Anon Developer
+email: anon@anon.com
+twitter_username: lorem_ipsum
+github_username:  lorem_ipsum
+gplus_username:  lorem_ipsum
+disqus_username: lorem_ipsum
 ```
 
-## How to:
+## Header Name
 
-- [Emojis in the projects list?](https://github.com/sergiokopplin/indigo/issues/72)
-- [Nokogiri dependencie problems?](https://github.com/sergiokopplin/indigo/issues/81)
-- [Syncing a Fork](https://help.github.com/articles/syncing-a-fork/)
-- [Tests with Travis CI - Tutorial](http://www.raywenderlich.com/109418/travis-ci-tutorial)
+To use the power of CSS Content and media query, the header name is defined on [src/styl/_header.styl](). Change to your prefered name.
 
-## Tests
+## Color customization
 
-You can test your app with:
+All color variables are in `src/styl/variable`. To change the main color, just set the new value at `main` assignment. Another colors are for texts and the code background color.
 
-```bash
-bundle exec htmlproof ./_site
-````
+## Theme Colors
 
-## Problems?
+Every post has a main color that is defined on [src/styl/_theme-colors.styl](). Just create a new color with the prefix `post-` and define your main-class: 'css' and color: '#2DA0C3' on every post you create.
 
-Tell me on github or open a [issue](https://github.com/sergiokopplin/indigo/issues/new).
+## Creating posts
 
-#### Inspirations:
-- [Addy Osmani](https://addyosmani.com/)
+You can use the `initpost.sh` to create your new posts. Just follow the command:
 
+```
+./initpost.sh -c Post Title
+```
+
+The new file will be created at `_posts` with this format `date-title.md`.
+
+## Front-matter 
+
+When you create a new post, you need to fill the post information in the front-matter, follow this example:
+
+```
 ---
+layout: post
+title: "Falando sobre RSCSS"
+date: 2016-02-07 18:48:16
+image: '/assets/img/rscss/rscss.png'
+description: 'Escrevendo CSS sem perder a sanidade. Aprenda uma metodologia que pode salvar muitas dores de cabeça.'
+main-class: 'css'
+color: '#2DA0C3'
+tags:
+- css
+- metodologia
+- frontend
+categories:
+twitter_text: 'Escrevendo CSS sem perder a sanidade.'
+introduction: 'Escrevendo CSS sem perder a sanidade. Com essa introdução, Rico St. Cruz o criador chama a atenção de todos sobre uma metodologia melhor para se escrever CSS.'
+---
+```
 
-[MIT](http://kopplin.mit-license.org/) License © Sérgio Kopplin
+## Running the blog in local
+
+In order to compile the assets and run Jekyll on local you need to follow those steps:
+
+- Install [NodeJS](https://nodejs.org/)
+- Run `npm install`
+- Run `npm install -g gulp gulp-cli` (maybe you need to use `sudo` command)
+- Run `gulp`
+
+## Windows 10 Step
+
+If you use Windows 10, change this line on [gulpfile.js](https://github.com/willianjusten/will-jekyll-template/blob/gh-pages/gulpfile.js#L23) to `spawn('jekyll.bat', ['build'])`.
+
+## Questions
+
+Having a problem getting something to work or want to know why I setup something in a certain way? Ping me on Twitter [@willian_justen](https://twitter.com/willian_justen) or file a [GitHub Issue](https://github.com/willianjusten/will-jekyll-template/issues/new).
+
+
+## Donation
+
+If you liked my work, buy me a coffee <3
+
+[![paypal](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=UTMFZUHX6EUGE)
+
+## License
+
+This theme is free and open source software, distributed under the The MIT License. So feel free to use this Jekyll theme on your site without linking back to me or using a disclaimer.
+
+If you’d like to give me credit somewhere on your blog or tweet a shout out to [@willian_justen](https://twitter.com/willian_justen), that would be pretty sweet.
