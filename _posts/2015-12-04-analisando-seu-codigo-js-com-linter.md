@@ -4,7 +4,7 @@ title: "Analisando seu código JS com um linter"
 date: 2015-12-04 22:43:23
 image: '/assets/img/linter/errors-list.png'
 description: 'Valide seu código em JS/ES6 em busca de erros, warnings, códigos esquecidos e melhore a sua qualidade. Seu amiguinho agradece um código mais limpo.'
-main-class: 'js'
+main-class: 'nodejs'
 color: '#D6BA32'
 tags:
 - js
@@ -17,7 +17,7 @@ introduction: 'Valide seu código em JS/ES6 em busca de erros, warnings, código
 
 ## Introdução
 
-Faaaala pessoal, fazia muito tempo que eu não escrevia e confesso que isso já estava me agoniando. Então resolvi voltar a <s>falar besteiras</s> escrever!! 
+Faaaala pessoal, fazia muito tempo que eu não escrevia e confesso que isso já estava me agoniando. Então resolvi voltar a <s>falar besteiras</s> escrever!!
 
 Como não poderia deixar de ser, estou escrevendo ouvindo música. A playlist de hoje é [Brains](https://open.spotify.com/user/spotifybrazilian/playlist/0nUucSaL2BGl2VZlbY5TwR), uma playlist que está sendo montada lá na [CCXP](http://www.ccxp.com.br/), muita música maneira! Bota para tocar e vai lendo =D
 
@@ -37,7 +37,7 @@ Se você já ficou puto com isso, sinta-se abraçado, porque eu também já cans
 
 No momento você está igual o John Travolta de novo.
 
-![John Question](https://media.giphy.com/media/FxufOs6bQwxO0/giphy.gif) 
+![John Question](https://media.giphy.com/media/FxufOs6bQwxO0/giphy.gif)
 
 ## Entendi seu ponto, mas como evitar isso?
 
@@ -117,7 +117,7 @@ Tendo já o arquivo, basta você rodar no terminal em cima do arquivo desejado e
 {% highlight js %}
 (function () {
     'use strict';
-    
+
     const a = 'will';
 
     function() {

@@ -3,7 +3,7 @@ layout: post
 title: "#1 - Por que usar SVG?"
 date: 2015-01-08 08:39:47
 description: "O SVG finalmente começa dar o ar das graças e você vai saber aqui o porquê disso."
-main-class: 'svg'
+main-class: 'html'
 color: '#7D669E'
 tags:
 - svg
@@ -84,5 +84,3 @@ Deixo para vocês uma última imagem e um link falando sobre quais as tendência
 ![SVG Trends](https://ihatetomatoes.net/wp-content/uploads/2014/12/img_assets_svg.jpg)
 
 [Design Trends de 2015](http://foundersgrid.com/design-trends-2015)
-
-

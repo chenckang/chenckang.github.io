@@ -4,14 +4,11 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site e.g. http://willianjusten.com.br
 
 # User settings
-username: colin.ck
-user_description: Anon Developer at Lorem Ipsum Dolor
-user_title: Anon Developer
-email: anon@anon.com
-twitter_username: lorem_ipsum
-github_username:  lorem_ipsum
-gplus_username:  lorem_ipsum
-disqus_username: lorem_ipsum
+username: 東の康
+user_description: 前端开发者，目前任职于阿里巴巴，前百度员工，HITer
+user_title: Senior FE Developer
+email: colin.ck@gmail.com
+disqus_username: chenckang
 
 # Build settings
 markdown: kramdown
@@ -31,12 +28,15 @@ compress_html:
 links:
   - title: Home
     url: /
-  - title: Series
-    url: /series
-  - title: Tags
-    url: /tags
+  # - title: Series
+  #   url: /series
+  # - title: Tags
+  #   url: /tags
   - title: About Me
     url: /about
 
 # exclude my node related stuff
 exclude: ['package.json', 'src', 'node_modules']
+
+gems: [jekyll-paginate]
+paginate: 1
