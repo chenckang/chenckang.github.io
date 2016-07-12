@@ -2,17 +2,16 @@
 <html lang="en" xmlns:wb="http://open.weibo.com/wb" {% if page.main-class %}class="post-{{ page.main-class }}"{% endif %}>
     {% include head.html %}
     <body>
-        {% include svg-icons.html %}
-        {% include header-post.html %}
         {% include links.html %}
+        {% include header-post.html %}
         <section class="post">
+          <article role="article" id="post" class="post-content" itemprop="articleBody">
+              <div class="stamp"><time>{{ page.date|date: '%B %d, %Y' }}</time></div>
+              {{ content }}
+          </article>
 
-            <article role="article" id="post" class="post-content" itemprop="articleBody">
-                {{ content }}
-            </article>
-
-            {% include author.html %}
-            {% include comments.html %}
+          {% include author.html %}
+          {% include comments.html %}
         </section>
         {% include footer.html %}
     </body>

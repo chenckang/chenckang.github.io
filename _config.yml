@@ -12,7 +12,9 @@ disqus_username: chenckang
 
 # Build settings
 markdown: kramdown
-highlighter: rouge
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
 permalink: /:title/
 
 
@@ -39,4 +41,7 @@ links:
 exclude: ['package.json', 'src', 'node_modules']
 
 gems: [jekyll-paginate]
-paginate: 1
+paginate: 10
+
+# Disqus
+disqus_shortname: chenckang

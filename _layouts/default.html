@@ -6,11 +6,11 @@ layout: compress
 <html lang="en" xmlns:wb="http://open.weibo.com/wb" {% if page.main-class %}class="post-{{ page.main-class }}"{% endif %}>
     {% include head.html %}
     <body>
-        {% include svg-icons.html %}
-        {% include header-default.html %}
-            <section class="content">
-                {{ content }}
-            </section>
-        {% include footer.html %}
+      {% include menu-search.html %}
+      {% include links.html %}
+      <section class="content">
+        {{ content }}
+      </section>
+      {% include footer.html %}
     </body>
 </html>
