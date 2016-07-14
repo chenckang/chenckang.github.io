@@ -6,7 +6,10 @@
         {% include header-post.html %}
         <section class="post">
           <article role="article" id="post" class="post-content" itemprop="articleBody">
-              <div class="stamp"><time>{{ page.date|date: '%B %d, %Y' }}</time></div>
+              <div class="stamp">
+                <time>{{ page.date|date: '%B %d, %Y' }}</time>
+                <span id="busuanzi_container_page_pv" class="post-read">本文阅读<span id="busuanzi_value_page_pv"></span>次</span>
+              </div>
               {{ content }}
           </article>
 
