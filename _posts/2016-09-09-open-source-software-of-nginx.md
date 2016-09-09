@@ -1,9 +1,9 @@
 ---
 layout: post
-title: "开源软件的架构 - nginx"
+title: "开源软件的架构-nginx"
 date: 2016-09-09 13:36:16
 image: '/assets/img/'
-ddescription: Nginx官方文档文档之一，解释了nginx的历史、设计、以及内部工作机制等，总体还是很深刻的一片文章。
+description: 'Nginx官方文档文档之一，解释了nginx的历史、设计、以及内部工作机制等，总体还是很深刻的一片文章。'
 main-class: 'css'
 tags:
 - theory
