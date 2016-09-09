@@ -8,7 +8,6 @@ main-class: 'css'
 tags:
 - theory
 categories:
-introduction: 'How to use this template'
 ---
 
 # 函数式编程
